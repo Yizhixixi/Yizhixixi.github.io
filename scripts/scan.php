@@ -1,14 +1,13 @@
 <?php
-// 指定要扫描的目录，这里以脚本所在目录的 'ass' 子目录为例
-// 假设该脚本位于网站根目录下
-$directoryName = 'ass';
+// 指定要扫描的目录，这里以 '/assets/' 目录为例
+$directoryName = '/assets/';
 $directory = __DIR__ . DIRECTORY_SEPARATOR . $directoryName;
 
 // 用于存储文件信息的数组
 $fileList = [];
 
 // 要排除的文件列表
-$excludeFiles = ['index.html', 'scan.php'];
+$excludeFiles = ['index.html', 'scan.php', 'scan.js'];
 
 // 检查目录是否存在
 if (is_dir($directory)) {
