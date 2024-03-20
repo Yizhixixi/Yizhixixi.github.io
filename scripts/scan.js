@@ -1,4 +1,4 @@
-fetch('/scan.php')
+fetch('./scan.php')
     .then(response => response.json()) // 解析JSON响应
     .then(files => {
         const fileListElement = document.getElementById('file-list');
