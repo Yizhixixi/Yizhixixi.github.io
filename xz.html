@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下载页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .search-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+            background: white;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        #uploadForm {
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>欢迎下载</h1>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="搜索文件名..." onkeyup="searchFiles()">
+    </div>
+
+    <div id="uploadForm">
+        <input type="file" id="fileUpload">
+        <button onclick="alert('请选择文件进行上传')">上传文件</button>
+    </div>
+
+    <table id="fileTable">
+        <tr>
+            <th>时间</th>
+            <th>备注</th>
+            <th>文件名</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>2024-10-22</td>
+            <td>教材同步pdf电子课本</td>
+            <td>数学 人教版 七年级 上册.pdf</td>
+            <td><a href="https://yizhixixi.github.io/assets/义务教育教科书 数学 七年级 上册.pdf" download>下载</a></td>
+        </tr>
+        <tr>
+            <td>2024-10-22</td>
+            <td>教材同步pdf电子课本</td>
+            <td>语文 人教版 七年级 上册</td>
+            <td><a href="https://yizhixixi.github.io/assets/义务教育教科书 语文 七年级 上册.pdf" download>下载</a></td>
+        </tr>
+        <tr>
+            <td>2024-10-22</td>
+            <td>教材同步pdf电子课本</td>
+            <td>英语 人教版 七年级 上册</td>
+            <td><a href="https://yizhixixi.github.io/assets/义务教育教科书 英语 七年级 上册.pdf" download>下载</a></td>
+        </tr>
+        <tr>
+            <td>2024-10-22</td>
+            <td>教材同步pdf电子课本</td>
+            <td>地理 人教版 七年级 上册</td>
+            <td><a href="https://yizhixixi.github.io/assets/电子课本 地理 七年级上册.pdf" download>下载</a></td>
+		</tr>
+        <tr>
+            <td>2024-10-22</td>
+            <td>教材同步pdf电子课本</td>
+            <td>中国历史 人教版 七年级 上册</td>
+            <td><a href="https://yizhixixi.github.io/assets/电子课本 中国历史 七年级上册.pdf" download>下载</a></td>
+        </tr>
+        <tr>
+            <td>2024-10-22</td>
+            <td>教材同步pdf电子课本</td>
+            <td>体育与健康 人教版 七年级 全一册</td>
+            <td><a href="https://yizhixixi.github.io/assets/电子课本 体育与健康 七年级全一册.pdf" download>下载</a></td>
+		</tr>
+        <tr>
+            <td>2024-10-22</td>
+            <td>教材同步pdf电子课本</td>
+            <td>艺术 美术 人教版 七年级 上册</td>
+            <td><a href="https://yizhixixi.github.io/assets/电子课本 艺术 美术 七年级上册.pdf" download>下载</a></td>
+		</tr>
+        <tr>
+            <td>2024-10-22</td>
+            <td>教材同步pdf电子课本</td>
+            <td>俄语 人教版 七年级 上册</td>
+            <td><a href="https://yizhixixi.github.io/assets/电子课本 俄语 七年级上册.pdf" download>下载</a></td>
+		</tr>
+        <tr>
+            <td>2024-10-22</td>
+            <td>教材同步pdf电子课本</td>
+            <td>日语 人教版 七年级 全一册</td>
+            <td><a href="https://yizhixixi.github.io/assets/电子课本 日语 七年级全一册.pdf" download>下载</a></td>
+    </table>
+	
+	    </div>
+    <div class="contact">
+        <p>声明：<br>
+           本页面由一只西西编写 仅供个人的展示，资源存储使用</p>
+    </div>
+
+    <script>
+        function searchFiles() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const table = document.getElementById('fileTable');
+            const tr = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < tr.length; i++) {
+                const td = tr[i].getElementsByTagName('td')[2]; // 文件名列
+                if (td) {
+                    const txtValue = td.textContent || td.innerText;
+                    tr[i].style.display = txtValue.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
