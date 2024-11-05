@@ -1,3 +1,13 @@
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #f4f4f9;
+	color: #333;
+}
+
+
+
+
+/* gk.html 中引用的样式 */
 .heading {
 	background-color: silver;
 	text-align: center;
@@ -11,6 +21,41 @@
 	margin: 0.5em auto;
 	padding: 0.5em;
 	line-height: 1.5;
+}
+/* gk.html 中引用的样式 */
+
+
+
+.header {
+	text-align: center;
+	padding: 50px 0;
+	background-color: #39c5bb;
+	color: white;
+}
+
+.header h1 {
+	font-size: 3em;
+}
+
+.content {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 50px;
+	text-align: center;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.contact {
+	background-color: #39c5bb;
+	color: white;
+	padding: 20px;
+	text-align: center;
 }
 
 emsp {
