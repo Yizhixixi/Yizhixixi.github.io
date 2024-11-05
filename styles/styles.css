@@ -22,6 +22,11 @@ body {
 	padding: 0.5em;
 	line-height: 1.5;
 }
+
+.text-content {
+	margin: auto 3.82%;
+	text-indent: 2em;
+}
 /* gk.html 中引用的样式 */
 
 
